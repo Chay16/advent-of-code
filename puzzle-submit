@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+from datetime import datetime as dt
+from aocd import submit
+import argparse
+
+parser = argparse.ArgumentParser("AoC Submitter")
+parser.add_argument("answer", type=str, help="Answer to be submitted")
+parser.add_argument("--part", type=str, default=None, help="Part Submission")
+parser.add_argument("--day", type=int, default=dt.today().day, help="Day [default : %(default)s]")
+parser.add_argument("--year", type=int, default=dt.today().year, help="Year [default : %(default)s]")
+args = parser.parse_args()
+
+submit(args.answer, part=args.part, day=args.day, year=args.year)
