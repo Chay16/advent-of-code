@@ -1,2 +1,2 @@
-# advent-of-code
-Advent of Code Personal Submissions
+# Advent of Code
+Advent of Code Personal Submissions repository
