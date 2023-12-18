@@ -4,4 +4,4 @@ DAY=${1:-$(date +%d)}
 YEAR=${2:-$(date +%Y)}
 mkdir -p "${YEAR}/data/"
 aocd ${DAY} ${YEAR} > "${YEAR}/data/${DAY}.txt"
-echo "data = open(\"data/${DAY}.txt\").read().split(\"\\n\")" >> "${YEAR}/${DAY}.py"
+echo "data = open(\"data/${DAY}.txt\").read().split(\"\\n\")[:-1]" >> "${YEAR}/${DAY}.py"
